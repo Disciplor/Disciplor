@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.4/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="entry-form">
+      <textarea id="entry-text" placeholder="Write your journal entry here..." required></textarea>
+      <input type="date" id="entry-date" required />
+      <button id="add-entry">Add Entry</button>
+      <button id="export-xlsx">Export to XLSX</button>
+      <input type="file" id="import-xlsx" accept=".xlsx" />
+    </div>
+    <div class="entry-list">
+      <h2>Journal Entries</h2>
+      <ul id="entries"></ul>
+      <div class="delete-entry">
+        <label for="delete-date">Delete Entry by Date:</label>
+        <input type="date" id="delete-date" />
+        <button id="delete-entry">Delete</button>
+        <button id="delete-all-entries">Delete All Entries</button>
+      </div>
+      <div class="custom-fields">
+        <h3>Custom Fields</h3>
+        <input type="text" id="custom-field-name" placeholder="Field Name">
+        <select id="custom-field-type">
+          <option value="text">Text</option>
+          <option value="dropdown">Dropdown</option>
+        </select>
+        <button id="add-custom-field">Add Custom Field</button>
+        <div id="custom-fields-list"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
